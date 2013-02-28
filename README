@@ -1,6 +1,13 @@
-I managed to build a clapack shared library for J, which includes the blas, so there are no
-dependencies for end users. It assumes you have F2C, libm and that's it.
+I managed to build a clapack shared library for J, which includes the blas, 
+so there are no dependencies for end users. It assumes you have F2C, libm and 
+that's it.
 
-Please excuse the Makefile mess; it was a quick hack. When linux migrates to modern versions
-of lapack (3.4 and above), the j-lapacke build might be preferred. Meanwhile, this can help
-people now.
+Please excuse the Makefile mess; it was a quick hack. When linux migrates 
+to modern versions of lapack (3.4 and above), the j-lapacke build might be 
+preferred. Meanwhile, this can help people now.
+
+To use: drop the shared library and lapack.ijs file in your 
+addons/math/lapack directory. 
+
+If you can't get F2C on your system for somereason, you should be able 
+to add those objects to the shared library in the same manner.
