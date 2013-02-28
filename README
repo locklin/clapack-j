@@ -6,7 +6,7 @@ Please excuse the Makefile mess; it was a quick hack. When linux migrates
 to modern versions of lapack (3.4 and above), the j-lapacke build might be 
 preferred. Meanwhile, this can help people now.
 
-To use: drop the shared library and lapack.ijs file in your 
+To use: drop the shared library lapack64.so and lapack.ijs file in your 
 addons/math/lapack directory. 
 
 If you can't get F2C on your system for somereason, you should be able 
