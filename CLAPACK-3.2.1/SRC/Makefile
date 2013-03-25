@@ -369,7 +369,7 @@ ALLOBJ=$(SLASRC) $(DLASRC) $(CLASRC) $(ZLASRC) $(SCLAUX) $(DZLAUX)	\
 	$(ALLAUX)
 
 ../$(LAPACKLIB): $(ALLOBJ) $(ALLXOBJ)
-	$(LOADER) $(LOADOPTS) -shared -Wl,-soname,liblapack.so -o $@ $(ALLOBJ) ../BLAS/SRC/*.o -Wl,-lm -Wl,-lf2c -Wl,-L../blas_LINUX.so
+	$(LOADER) $(LOADOPTS) -shared -Wl,-soname,liblapack.so -o $@ $(ALLOBJ) ../BLAS/SRC/*.o ../F2CLIBS/libf2c/*.o -Wl,-lm  -Wl,-L../blas_LINUX.so
 
 single: $(SLASRC) $(ALLAUX) $(SCLAUX) 
 	$(ARCH) $(ARCHFLAGS) ../$(LAPACKLIB) $(SLASRC) $(ALLAUX) \
